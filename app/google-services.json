@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "119708139580",
+    "project_id": "softeat-8c6ee",
+    "storage_bucket": "softeat-8c6ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119708139580:android:e709ed80edefcdb6744339",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119708139580-p1vdafp5fi3ppajila072tu7q437flbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjLOTLEA8iwDwBIjp9NoQ2bNlQYWy5jHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119708139580-p1vdafp5fi3ppajila072tu7q437flbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
