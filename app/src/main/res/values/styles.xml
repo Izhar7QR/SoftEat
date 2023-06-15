@@ -13,4 +13,13 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- EditText -->
+    <style name="EditText" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.App.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

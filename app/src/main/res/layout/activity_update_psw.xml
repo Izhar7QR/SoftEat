@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdatePsw">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Recuperar contrsena"
+            android:textSize="30sp"
+            android:textColorLink="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Ingresa el token recibido por correo y una nueva contrasena, una vez utilizado el token este cambiara."
+            android:textSize="16sp"
+            android:textColorLink="@color/black"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlToken"
+            style="@style/TextAppearance.App.TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginTop="50dp"
+            android:hint="Token">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtToken"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/background_edit_text"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlPsw"
+            style="@style/TextAppearance.App.TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginTop="10dp"
+            android:hint="Nueva constrasena"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPsw"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/background_edit_text"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlConfirmarPsw"
+            style="@style/TextAppearance.App.TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginTop="10dp"
+            android:hint="Confirmar constrasena"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtConfirmarPswS"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/background_edit_text"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCambiarPsw"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_btn_primary"
+            android:onClick="btnUpdate"
+            android:text="Cambiar Constrasena"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/psw"
+            android:layout_width="match_parent"
+            android:layout_height="222dp"
+            android:layout_marginTop="40dp"
+            android:onClick="btnUpdate"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/psw" />
+
+    </LinearLayout>
+
+
+</ScrollView>

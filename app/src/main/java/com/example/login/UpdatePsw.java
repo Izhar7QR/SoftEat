@@ -1,11 +1,13 @@
 package com.example.login;
 
-import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import androidx.appcompat.widget.AppCompatButton;
+
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -17,34 +19,32 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Registro extends AppCompatActivity {
-    private EditText txtNombre;
-    private EditText txtEmail;
-    private EditText txtUsuario;
-    private EditText txtPass;
-    private EditText txtConfirmPass;
-    private boolean passwordShowing = false;
-    private boolean conPasswordShowin = false;
+public class UpdatePsw extends AppCompatActivity {
+
+    private EditText txtTokens, txtPsw, txtCPsw;
+    private Button btnCambiarPsw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
-        txtNombre = findViewById(R.id.nameET);
-        txtUsuario= findViewById(R.id.usuarioET);
-        txtEmail = findViewById(R.id.emailET);
-        txtPass = findViewById(R.id.passwordET);
-        txtConfirmPass = findViewById(R.id.conPasswordET);
+        setContentView(R.layout.activity_update_psw);
+        txtTokens = findViewById(R.id.txtToken);
+        txtPsw = findViewById(R.id.txtPsw);
+        txtCPsw = findViewById(R.id.txtConfirmarPswS);
+
+        btnCambiarPsw = findViewById(R.id.btnCambiarPsw);
+
+
+
+
     }
 
-    public void clickBtnInsertar(View view) {
-        String nombre = txtNombre.getText().toString().trim();
-        String email = txtEmail.getText().toString().trim();
-        String usuario = txtUsuario.getText().toString().trim();
-        String password = txtPass.getText().toString().trim();
-        String confirmarPassword = txtConfirmPass.getText().toString().trim();
+    public void btnUpdate (View view){
+        String token = txtTokens.getText().toString().trim();
+        String password = txtPsw.getText().toString().trim();
+        String confirmarPassword = txtCPsw.getText().toString().trim();
 
-        if (nombre.isEmpty() || email.isEmpty() || usuario.isEmpty() || password.isEmpty() || confirmarPassword.isEmpty()) {
+        if (token.isEmpty() || password.isEmpty() || confirmarPassword.isEmpty()) {
             Snackbar.make(view, "Por favor completa todos los campos", Snackbar.LENGTH_LONG).show();
             return;
         }
@@ -54,22 +54,21 @@ public class Registro extends AppCompatActivity {
             return;
         }
 
-        String url = "http://192.168.17.96/android_distribuidora/insertar.php";
+        String url = "http://192.168.17.96/android_distribuidora/update.php";
 
         final Map<String, String> parametros = new HashMap<>();
-        parametros.put("name", txtNombre.getText().toString());
-        parametros.put("phone", txtUsuario.getText().toString());
-        parametros.put("email", txtEmail.getText().toString());
-        parametros.put("password", txtPass.getText().toString());
-
-        String token = generatePassword(8);
-        parametros.put("token", token);
+        parametros.put("token", txtTokens.getText().toString());
+        parametros.put("password", txtCPsw.getText().toString());
+        String newtoken = generateToken(8);
+        parametros.put("newToken", newtoken);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Snackbar.make(view, "Felicidades usuario agregado exitosamente", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(view, "Credenciales actualizadas", Snackbar.LENGTH_LONG).show();
+                        Intent intent = new Intent(UpdatePsw.this, Login.class);
+                        startActivity(intent);
                     }
                 },
                 new Response.ErrorListener() {
@@ -86,7 +85,7 @@ public class Registro extends AppCompatActivity {
 
         Volley.newRequestQueue(this).add(stringRequest);
     }
-    public static String generatePassword(int length) {
+    public static String generateToken(int length) {
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         Random random = new Random();
         StringBuilder password = new StringBuilder(length);
@@ -98,7 +97,4 @@ public class Registro extends AppCompatActivity {
 
         return password.toString();
     }
-
 }
-
-

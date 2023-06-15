@@ -4,4 +4,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="Telefono">Numero de Telefono</string>
+    <string name="Usuario">Nombre de Usuario</string>
 </resources>

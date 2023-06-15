@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".RecuperarPsw">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Recuperar contrsena"
+        android:textSize="30sp"
+        android:textColorLink="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextAppearance.App.TitleMedium"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_marginTop="50dp"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/correoR"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/background_edit_text"
+            android:maxLines="1"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextAppearance.App.TitleMedium"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_marginTop="50dp"
+        android:hint="Nombre de usuario">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/background_edit_text"
+            android:maxLines="1"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_btn_primary"
+        android:onClick="btnRecuperar"
+        android:text="Generar Token"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUpdatePsw"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_token"
+        android:onClick="btnRecuperar"
+        android:text="Ya tengo un token"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/psw"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/psw"/>
+
+</LinearLayout>
