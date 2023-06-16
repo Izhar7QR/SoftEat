@@ -22,4 +22,9 @@
     <style name="TextAppearance.App.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
         <item name="android:textSize">20sp</item>
     </style>
+
+    <!-- Navigation Drawer -->
+    <style name="DrawerMenuItem">
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

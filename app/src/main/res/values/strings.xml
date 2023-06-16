@@ -6,4 +6,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="Telefono">Numero de Telefono</string>
     <string name="Usuario">Nombre de Usuario</string>
+
+    <string name="navigation_drawer_open">Abrir navegación</string>
+    <string name="navigation_drawer_close">Cerrar navegación</string>
 </resources>

@@ -1,20 +1,33 @@
 package com.example.login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.ui.AppBarConfiguration;
 
+import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.navigation.NavigationBarMenu;
 
 public class MainActivity extends AppCompatActivity {
     private int selectedTab = 1;
     private LottieAnimationView animationView;
+    private AppBarConfiguration appBarConfiguration;
+    private TopBarManager topBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +49,33 @@ public class MainActivity extends AppCompatActivity {
         final ImageView notificationImage=findViewById(R.id.notificationImage);
         final ImageView profileImage=findViewById(R.id.profileImage);
 */
+        // Configurar la barra de navegación
+        topBar = new TopBarManager();
+        topBar.setupTopBar(this, findViewById(R.id.topAppBar));
+
+        // Configurar el botón de navegación
+        topBar.setNavigationIcon(
+                ContextCompat.getDrawable(this, R.drawable.menu),
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
+                        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                            drawerLayout.closeDrawer(GravityCompat.START);
+                        } else {
+                            drawerLayout.openDrawer(GravityCompat.START);
+                        }
+                    }
+                }
+        );
+
+        // Asignar listeners a los botones de la barra de navegación
+        topBar.setButton1ClickListener();
+
+
+
+
+
         final TextView homeTxt=findViewById(R.id.homeTxt);
         final TextView likeTxt=findViewById(R.id.likeTxt);
         final TextView notificationTxt=findViewById(R.id.notificationTxt);
