@@ -251,4 +251,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Tools.class);
         startActivity(intent);
     }
+    public void goMyAccount(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this, MyAccount.class);
+        startActivity(intent);
+    }
 }

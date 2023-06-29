@@ -7,6 +7,9 @@
     <string name="Telefono">Numero de Telefono</string>
     <string name="Usuario">Nombre de Usuario</string>
 
+    <string name="username">\@Username</string>
+    <string name="email">username@email.com</string>
+
     <string name="navigation_drawer_open">Abrir navegación</string>
     <string name="navigation_drawer_close">Cerrar navegación</string>
     <!-- TODO: Remove or change this placeholder text -->
