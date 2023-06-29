@@ -9,4 +9,52 @@
 
     <string name="navigation_drawer_open">Abrir navegación</string>
     <string name="navigation_drawer_close">Cerrar navegación</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="instruccion">Selecciona la opcion que desees ejecutar</string>
+    <string name="btn1">PESO</string>
+    <string name="btn2">LONGITUD</string>
+    <string name="btn3">TEMPERATURA</string>
+    <string name="btn4">VOLUMEN</string>
+    <string name="Resultado">Resultado de conversion:</string>
+    <string name="btnCalcular">CALCULAR</string>
+    <string name="Instruccion">Entrada (de unidad):</string>
+    <string name="Instruccion2">Selecciona la opcion a convertir:</string>
+
+
+    //Spinner de Peso
+    <string-array name="spinnerPeso">
+        <item>Hectogramo</item>
+        <item>Decagramo</item>
+        <item>Gramo</item>
+        <item>Decigramo</item>
+        <item>Centigramo</item>
+        <item>Miligramo</item>
+        <item>Kilogramo</item>
+        <item>Onza</item>
+        <item>Libra</item>
+    </string-array>
+    //Spinner de Longitud
+    <string-array name="spinnerLongitud">
+        <item>Metro</item>
+        <item>Decímetro</item>
+        <item>Centímetro</item>
+        <item>Milímetro</item>
+        <item>Decámetro</item>
+        <item>Hectómetro</item>
+        <item>Kilómetro</item>
+    </string-array>
+    //Spinner de Temperatura
+    <string-array name="spinnerTemperatura">
+        <item>Fahrenheit</item>
+        <item>Celsius</item>
+        <item>Kelvin</item>
+    </string-array>
+    //Spinner de Volumen
+    <string-array name="spinnerVolumen">
+        <item>Litro</item>
+        <item>Mililitro</item>
+    </string-array>
 </resources>

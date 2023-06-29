@@ -24,5 +24,12 @@
     <color name="primary">#01AED8</color>
 
 
+
     <color name="lavanda">#8692f7</color>
+    <color name="gray_200">#F9F9F9</color>
+
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_dark_onBackground">#E3E2E6</color>
+    <color name="md_theme_light_onBackground">#1A1B1E</color>
 </resources>

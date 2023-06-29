@@ -3,12 +3,13 @@ package com.example.login;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 public class DrawerManager {
     private ActionBarDrawerToggle drawerToggle;
 
-    public void setupDrawer(MainActivity activity, DrawerLayout drawerLayout) {
+    public void setupDrawer(AppCompatActivity activity, DrawerLayout drawerLayout) {
         drawerToggle = new ActionBarDrawerToggle(
                 activity,
                 drawerLayout,

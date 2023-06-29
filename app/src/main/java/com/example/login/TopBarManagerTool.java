@@ -10,11 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
-public class TopBarManager {
+public class TopBarManagerTool {
     private MaterialToolbar topAppBar;
 
     public void setupTopBar(AppCompatActivity activity) {
-        topAppBar = activity.findViewById(R.id.topAppBar);
+        topAppBar = activity.findViewById(R.id.topAppBarTool);
         activity.setSupportActionBar(topAppBar);
     }
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/calculatorT"
+        android:icon="@drawable/calculator"
+        android:title="Calculadora" />
+    <item
+        android:id="@+id/toDoT"
+        android:icon="@drawable/todo"
+        android:title="Lista de tareas" />
+    <item
+        android:id="@+id/converterT"
+        android:icon="@drawable/converter"
+        android:title="Convertidor" />
+
+</menu>

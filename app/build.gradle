@@ -56,4 +56,10 @@ dependencies {
     //Lottie
     implementation 'com.airbnb.android:lottie:6.0.0'
 
+    implementation 'org.mozilla:rhino:1.7.13'
+
+    //implementation 'org.mozilla:rhino:1.7.13' // Elimina esta línea si la tienes
+    //implementation 'com.android.support:customtabs:28.0.0' // Agrega esta línea
+
+
 }
